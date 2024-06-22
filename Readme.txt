@@ -84,3 +84,5 @@ Paste the below code in settings_schema.json:
       }
     ]
   },
+
+Note : Edit the css and class-names according to your requirements.
