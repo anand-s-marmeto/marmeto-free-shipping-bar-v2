@@ -1,0 +1,51 @@
+<script src="{{'shipping-bar.js' |  asset_url}}" defer></script>
+<link rel="stylesheet" href="{{ 'shipping-bar.css' |  asset_url }}">
+
+<marmeto-shipping-bar-v2>
+  <div class="shipping-bar"> 
+    <!-- The heading is optional depending on your requirement. -->
+    {% comment %} <div class="shipping-bar__heading">{{ settings.free_shipping_heading }}</div> {% endcomment %}
+
+    <div class="shipping-bar__message">
+      <p>
+        You are <strong class="discount-away-amt"></strong> away from a <strong class="discount-away-next-offer"></strong>
+      </p>
+    </div>
+    
+    <div class="shipping-bar__wrapper">
+      <div class="shipping-bar__indicator">
+      </div>
+      <div class="shipping-bar__svgs">
+            {% if settings.first_threshold_image %}
+                <div class="shipping-threshold">
+                    <div class="threshold-image"><img src="{{ settings.first_threshold_image |  img_url }}" alt="First threshold image"></div>
+                    <div class="threshold-price">₹{{ settings.first_shipping_threshold }}</div>
+                    <div class="first-threshold-message">{{ settings.first_threshold_message }}</div>
+                </div>
+            {% endif %}
+            {% if settings.second_threshold_image %}
+                <div class="shipping-threshold">
+                    <div class="threshold-image"><img src="{{ settings.second_threshold_image |  img_url}}" alt="Second threshold image"></div>
+                    <div class="threshold-price">₹{{ settings.second_shipping_threshold }}</div>
+                    <div class="threshold-message">{{ settings.second_threshold_message }}</div>
+                </div>
+            {% endif %}
+            {% if settings.third_threshold_image %}
+                <div class="shipping-threshold">
+                    <div class="threshold-image"><img src="{{ settings.third_threshold_image |  img_url }}" alt="Third threshold image"></div>
+                    <div class="threshold-price">₹{{ settings.third_shipping_threshold }}</div>
+                    <div class="third-threshold-message">{{ settings.third_threshold_message }}</div>
+                </div>
+            {% endif %}
+            {% if settings.final_threshold_image %}
+                <div class="shipping-threshold">
+                    <div class="threshold-image"><img src="{{ settings.final_threshold_image |  img_url }}" alt="Final threshold image"></div>
+                    <div class="threshold-price">₹{{ settings.final_shipping_threshold }}</div>
+                    <div class="final-threshold-message">{{ settings.final_threshold_message }}</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+  </div>
+</marmeto-shipping-bar-v2>
+
