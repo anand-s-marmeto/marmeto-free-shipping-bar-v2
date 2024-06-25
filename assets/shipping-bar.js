@@ -6,6 +6,7 @@ class MarmetoShippingBarV2 extends HTMLElement {
 
   initShippingBar() {
     document.addEventListener("click", function (event) {
+      // Add the classname of your cart and quantity-selector button if present:
       if (
         event.target.classList.contains("cart-icon") ||
         event.target.classList.contains("quantity__button")
@@ -24,13 +25,15 @@ class MarmetoShippingBarV2 extends HTMLElement {
               this.discountProgress = document.querySelector(
                 ".marmeto-shipping-bar-v2__indicator"
               );
+              // Removing the step classnames:
               this.discountProgress.classList.remove(
                 "step1",
                 "step2",
                 "step3",
                 "step4"
               );
-
+              
+              // Deciding the shipping-bar__indicator width depending on the current cart price:
               if (subtotal < priceval1) {
                 let away_amt = priceval1 - subtotal;
                 document.querySelector(".discount-away-amt").innerHTML = "";

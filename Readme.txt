@@ -83,4 +83,9 @@ Paste the below code in settings_schema.json:
         "label": "Threshold price limit"
       }
     ]
-  },
+  }
+
+Use the below code to render the 'shipping-bar' snippet:
+{% render 'shipping-bar' %}
+
+Note : Edit the css and elements to target according to your requirements.
