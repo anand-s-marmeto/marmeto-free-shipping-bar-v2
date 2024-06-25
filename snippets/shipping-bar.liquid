@@ -2,25 +2,25 @@
 <link rel="stylesheet" href="{{ 'shipping-bar.css' |  asset_url }}">
 
 <marmeto-shipping-bar-v2>
-  <div class="shipping-bar"> 
+  <div class="marmeto-shipping-bar-v2"> 
     <!-- The heading is optional depending on your requirement. -->
-    {% comment %} <div class="shipping-bar__heading">{{ settings.free_shipping_heading }}</div> {% endcomment %}
+    {% comment %} <div class="marmeto-shipping-bar-v2__heading">{{ settings.free_shipping_heading }}</div> {% endcomment %}
 
-    <div class="shipping-bar__message">
+    <div class="marmeto-shipping-bar-v2__message">
       <p>
         You are <strong class="discount-away-amt"></strong> away from a <strong class="discount-away-next-offer"></strong>
       </p>
     </div>
     
-    <div class="shipping-bar__wrapper">
-      <div class="shipping-bar__indicator">
+    <div class="marmeto-shipping-bar-v2__wrapper">
+      <div class="marmeto-shipping-bar-v2__indicator">
       </div>
-      <div class="shipping-bar__svgs">
+      <div class="marmeto-shipping-bar-v2__svgs">
             {% if settings.first_threshold_image %}
-                <div class="shipping-threshold">
-                    <div class="threshold-image"><img src="{{ settings.first_threshold_image |  img_url }}" alt="First threshold image"></div>
-                    <div class="threshold-price">₹{{ settings.first_shipping_threshold }}</div>
-                    <div class="first-threshold-message">{{ settings.first_threshold_message }}</div>
+                <div class="marmeto-shipping-bar-v2__shipping-threshold">
+                    <div class="marmeto-shipping-bar-v2__threshold-image"><img src="{{ settings.first_threshold_image |  img_url }}" alt="First threshold image"></div>
+                    <div class="marmeto-shipping-bar-v2__threshold-price">₹{{ settings.first_shipping_threshold }}</div>
+                    <div class="marmeto-shipping-bar-v2__first-threshold-message">{{ settings.first_threshold_message }}</div>
                 </div>
             {% endif %}
             {% if settings.second_threshold_image %}
@@ -31,17 +31,17 @@
                 </div>
             {% endif %}
             {% if settings.third_threshold_image %}
-                <div class="shipping-threshold">
-                    <div class="threshold-image"><img src="{{ settings.third_threshold_image |  img_url }}" alt="Third threshold image"></div>
-                    <div class="threshold-price">₹{{ settings.third_shipping_threshold }}</div>
-                    <div class="third-threshold-message">{{ settings.third_threshold_message }}</div>
+                <div class="marmeto-shipping-bar-v2__shipping-threshold">
+                    <div class="marmeto-shipping-bar-v2__threshold-image"><img src="{{ settings.third_threshold_image |  img_url }}" alt="Third threshold image"></div>
+                    <div class="marmeto-shipping-bar-v2__threshold-price">₹{{ settings.third_shipping_threshold }}</div>
+                    <div class="marmeto-shipping-bar-v2__third-threshold-message">{{ settings.third_threshold_message }}</div>
                 </div>
             {% endif %}
             {% if settings.final_threshold_image %}
-                <div class="shipping-threshold">
-                    <div class="threshold-image"><img src="{{ settings.final_threshold_image |  img_url }}" alt="Final threshold image"></div>
-                    <div class="threshold-price">₹{{ settings.final_shipping_threshold }}</div>
-                    <div class="final-threshold-message">{{ settings.final_threshold_message }}</div>
+                <div class="marmeto-shipping-bar-v2__shipping-threshold">
+                    <div class="marmeto-shipping-bar-v2__threshold-image"><img src="{{ settings.final_threshold_image |  img_url }}" alt="Final threshold image"></div>
+                    <div class="marmeto-shipping-bar-v2__threshold-price">₹{{ settings.final_shipping_threshold }}</div>
+                    <div class="marmeto-shipping-bar-v2__final-threshold-message">{{ settings.final_threshold_message }}</div>
                 </div>
             {% endif %}
         </div>

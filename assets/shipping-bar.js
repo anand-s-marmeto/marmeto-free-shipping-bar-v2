@@ -19,10 +19,10 @@ class MarmetoShippingBarV2 extends HTMLElement {
               this.subtotal = cart_total;
 
               document
-                .querySelectorAll(".shipping-threshold")
+                .querySelectorAll(".marmeto-shipping-bar-v2__shipping-threshold")
                 .forEach((item) => item.classList.remove("active"));
               this.discountProgress = document.querySelector(
-                ".shipping-bar__indicator"
+                ".marmeto-shipping-bar-v2__indicator"
               );
               this.discountProgress.classList.remove(
                 "step1",
@@ -51,9 +51,9 @@ class MarmetoShippingBarV2 extends HTMLElement {
                   dis_coupon_msg2;
 
                 this.discountProgress.className =
-                  "shipping-bar__indicator step1";
+                  "marmeto-shipping-bar-v2__indicator step1";
                 document
-                  .querySelectorAll(".threshold-image")[0]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[0]
                   ?.classList.add("active");
               } else if (subtotal > priceval2 && subtotal < priceval3) {
                 let away_amt2 = priceval3 - subtotal;
@@ -67,28 +67,28 @@ class MarmetoShippingBarV2 extends HTMLElement {
                   dis_coupon_msg3;
 
                 this.discountProgress.className =
-                  "shipping-bar__indicator step2";
+                  "marmeto-shipping-bar-v2__indicator step2";
 
                 document
-                  .querySelectorAll(".threshold-image")[0]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[0]
                   ?.classList.add("active");
                 document
-                  .querySelectorAll(".threshold-image")[1]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[1]
                   ?.classList.add("active");
               } else {
                 this.discountProgress.className =
-                  "shipping-bar__indicator step4";
+                  "marmeto-shipping-bar-v2__indicator step4";
                 document
-                  .querySelectorAll(".threshold-image")[0]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[0]
                   ?.classList.add("active");
                 document
-                  .querySelectorAll(".threshold-image")[1]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[1]
                   ?.classList.add("active");
                 document
-                  .querySelectorAll(".threshold-image")[2]
+                  .querySelectorAll(".marmeto-shipping-bar-v2__threshold-image")[2]
                   ?.classList.add("active");
 
-                  document.querySelector('.shipping-bar__message').innerHTML = `<p>${finalThresholdMessage}<p>`
+                  document.querySelector('.marmeto-shipping-bar-v2__message').innerHTML = `<p>${finalThresholdMessage}<p>`
               }
             });
         }, 1000);
