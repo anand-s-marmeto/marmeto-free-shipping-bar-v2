@@ -1,26 +1,27 @@
-.marmeto-shipping-bar-v2__shipping-bar {
+.shipping-bar {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  min-height: 120px;
+  min-height: 150px;
 }
 
-.marmeto-shipping-bar-v2__wrapper {
+.shipping-bar__wrapper {
   width: 100%;
   height: 7px;
   border-radius: 30px;
   position: relative;
-  background: #d8e672;
+  border: 1px solid grey;
+  background: white;
   display: flex;
   align-items: center;
 }
 
 
 
-.marmeto-shipping-bar-v2__indicator {
+.shipping-bar__indicator {
   display: block;
-  background-color: rgb(0, 217, 100);
+  background-color: #DEEFED;
   position: absolute;
   border-radius: 30px;
   height: 100%;
@@ -29,50 +30,61 @@
 }
 
 
-.marmeto-shipping-bar-v2__indicator.step1 {
-  
+.shipping-bar__indicator.step1 {
+  width: 12.5%;
+}
+
+.shipping-bar__indicator.step2 {
   width: 25%;
-
 }
 
-.marmeto-shipping-bar-v2__indicator.step2 {
+.shipping-bar__indicator.step3 {
+  width: 37.5%;
+}
+
+.shipping-bar__indicator.step4 {
   width: 50%;
-  
 }
 
-.marmeto-shipping-bar-v2__indicator.step3 {
-    width: 75%;
+.shipping-bar__indicator.step5 {
+  width: 62.5%;
 }
 
-.marmeto-shipping-bar-v2__indicator.step4 {
-    width: 100%;
+.shipping-bar__indicator.step6 {
+  width: 75%;
+}
+
+.shipping-bar__indicator.step7 {
+  width: 100%;
 }
 
 
-.marmeto-shipping-bar-v2__heading {
+.shipping-bar__heading {
   font-size: 16px;
   font-weight: 700;
   display: none;
 }
 
-.marmeto-shipping-bar-v2__threshold-price{
+.threshold-price {
   font-size: 14px;
   font-weight: 900;
 }
-.marmeto-shipping-bar-v2__message{
+
+.shipping-bar__message {
   font-size: 16px;
   font-weight: 700;
 }
 
-.marmeto-shipping-bar-v2__shipping-threshold{
+.shipping-threshold {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: -20px;
+  text-align: center;
 }
 
-.marmeto-shipping-bar-v2__svgs {
+.shipping-bar__svgs {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -82,13 +94,19 @@
   width: 100%;
 }
 
-.marmeto-shipping-bar-v2__threshold-image {
+.threshold-image {
   border: 6px solid #ddddc5;
   padding: 5px;
   border-radius: 50%;
   background: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.marmeto-shipping-bar-v2__threshold-image.active{
-  border: 6px solid green;
+.threshold-image.active {
+  border: 6px solid #DEEFED;
+  background: #DEEFED;
 }

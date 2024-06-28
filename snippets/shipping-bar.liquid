@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ 'shipping-bar.css' |  asset_url }}">
 
 <marmeto-shipping-bar-v2>
-  <div class="marmeto-shipping-bar-v2"> 
+  <div class="marmeto-shipping-bar-v2" data-priceVal1="{{ settings.first_shipping_threshold }}" data-priceVal2="{{ settings.second_shipping_threshold }}" data-priceVal3="{{ settings.third_shipping_threshold }}" data-discCoupon1="{{ settings.first_threshold_message }}" data-discCoupon2 = "{{ settings.second_threshold_message }}" data-discCoupon3="{{ settings.third_threshold_message }}" data-finalThresholdMessage="{{ settings.final_threshold_message }}">
     <!-- The heading is optional depending on your requirement. -->
     {% comment %} <div class="marmeto-shipping-bar-v2__heading">{{ settings.free_shipping_heading }}</div> {% endcomment %}
 
